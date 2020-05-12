@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NotesList from "./components/NotesList";
+import AppEditor from "./components/AppEditor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-full h-screen bg-gray-400">
+      <div className="flex h-screen">
+        <div className="w-1/3 h-screen bg-gray-700">
+          <NotesList />
+        </div>
+        <div className="w-full bg-gray-600">
+          <AppEditor />
+        </div>
+      </div>
     </div>
   );
 }
